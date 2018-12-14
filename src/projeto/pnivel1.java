@@ -15,36 +15,57 @@ import javax.swing.JOptionPane;
 public class pnivel1 extends javax.swing.JFrame {
 
     ArrayList<Questao> arrayQuestoes = new ArrayList<>();
-    private String user;
+        questoes1 q1 = new questoes1();
 
-    public void user(String u) {
-        user = u;
-    }
 
     public pnivel1() {
         initComponents();
+        buttonGroup1.add(rA1);
+        buttonGroup1.add(rB1);
+        buttonGroup1.add(rC1);
+        buttonGroup1.add(rD1);
+        buttonGroup1.add(rE1);
 
-        questoes1 q1 = new questoes1();
-        arrayQuestoes = q1.Questao1();
-        enunciado1.setText(arrayQuestoes.get(0).enunciado);
-        usertext.setText(user);
-        System.out.println(user);
-        enunciado.add("Questao 1");
-        enunciado.add("Questao 2");
-        enunciado.add("Questao 3");
-        enunciado.add("Questao 4");
-        enunciado.add("Questao 5");
-        enunciado.add("Questao 6");
-        enunciado.add("Questao 7");
-        enunciado.add("Questao 8");
-        enunciado.add("Questao 9");
-        enunciado.add("Questao 10");
-        enunciado.add("Questao 11");
-        enunciado.add("Questao 12");
-        enunciado.add("Questao 13");
-        enunciado.add("Questao 14");
-        enunciado.add("Questao 15");
+        novaQuestao();
 
+    }
+     Questao q;
+
+    public void novaQuestao() {
+
+        int numeroSorteado = q1.randomizar();
+        indeces.add(numeroSorteado);
+        q = q1.questao.get(numeroSorteado);
+        campoTexto.setText(q.enunciado);
+        rA1.setText(q.getA());
+        rB1.setText(q.getB());
+        rC1.setText(q.getC());
+        rD1.setText(q.getD());
+        rE1.setText(q.getE());
+    }
+    int x = 0;
+    ArrayList<Integer> indeces = new ArrayList<>();
+    ArrayList<Questao> questoesCorretas = new ArrayList<>();
+
+    public boolean verificar() {
+        if (rA1.isSelected() == true && rA1.getText().equals(q.questaoCorreta)) {
+            System.out.println("Acertou A");
+            return true;
+        } else if (rB1.isSelected() == true && rB1.getText().equals(q.questaoCorreta)) {
+            System.out.println("Acertou B");
+            return true;
+        } else if (rC1.isSelected() == true && rC1.getText().equals(q.questaoCorreta)) {
+            System.out.println("Acertou C");
+            return true;
+        } else if (rD1.isSelected() == true && rD1.getText().equals(q.questaoCorreta)) {
+            System.out.println("Acertou D");
+            return true;
+        } else if (rE1.isSelected() == true && rE1.getText().equals(q.questaoCorreta)) {
+            System.out.println("Acertou E");
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -56,6 +77,7 @@ public class pnivel1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         rA1 = new javax.swing.JRadioButton();
@@ -69,42 +91,68 @@ public class pnivel1 extends javax.swing.JFrame {
         Desistir1 = new javax.swing.JButton();
         numeroQ1 = new javax.swing.JLabel();
         usertext = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        campoTexto = new javax.swing.JTextPane();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 153));
+        jPanel1.setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Sylfaen", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Questão;");
+        jLabel1.setText("Questão");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(390, 21, 115, 53);
 
-        rA1.setBackground(new java.awt.Color(0, 0, 153));
+        rA1.setBackground(new java.awt.Color(0, 51, 153));
         rA1.setForeground(new java.awt.Color(255, 255, 255));
         rA1.setText("A");
+        rA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rA1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(rA1);
+        rA1.setBounds(150, 350, 110, 23);
 
-        rB1.setBackground(new java.awt.Color(0, 0, 153));
+        rB1.setBackground(new java.awt.Color(0, 51, 153));
         rB1.setForeground(new java.awt.Color(255, 255, 255));
         rB1.setText("B");
+        jPanel1.add(rB1);
+        rB1.setBounds(270, 350, 120, 23);
 
-        rC1.setBackground(new java.awt.Color(0, 0, 153));
+        rC1.setBackground(new java.awt.Color(0, 51, 153));
         rC1.setForeground(new java.awt.Color(255, 255, 255));
         rC1.setText("C");
         rC1.setMaximumSize(new java.awt.Dimension(30, 23));
         rC1.setMinimumSize(new java.awt.Dimension(30, 23));
+        jPanel1.add(rC1);
+        rC1.setBounds(400, 350, 120, 23);
 
-        rD1.setBackground(new java.awt.Color(0, 0, 153));
+        rD1.setBackground(new java.awt.Color(0, 51, 153));
         rD1.setForeground(new java.awt.Color(255, 255, 255));
         rD1.setText("D");
         rD1.setMaximumSize(new java.awt.Dimension(30, 23));
         rD1.setMinimumSize(new java.awt.Dimension(30, 23));
+        jPanel1.add(rD1);
+        rD1.setBounds(530, 350, 100, 23);
 
-        rE1.setBackground(new java.awt.Color(0, 0, 153));
+        rE1.setBackground(new java.awt.Color(0, 51, 153));
         rE1.setForeground(new java.awt.Color(255, 255, 255));
         rE1.setText("E");
         rE1.setMaximumSize(new java.awt.Dimension(30, 23));
         rE1.setMinimumSize(new java.awt.Dimension(30, 23));
+        jPanel1.add(rE1);
+        rE1.setBounds(640, 350, 100, 23);
 
         jButton1.setBackground(new java.awt.Color(0, 153, 51));
         jButton1.setText("Confirma");
@@ -113,14 +161,20 @@ public class pnivel1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(350, 400, 150, 40);
 
         enunciado1.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         enunciado1.setForeground(new java.awt.Color(255, 255, 255));
-        enunciado1.setText("ENUNCIADO1");
+        enunciado1.setText("ENUNCIADO");
+        jPanel1.add(enunciado1);
+        enunciado1.setBounds(60, 60, 160, 60);
 
         NQ1.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         NQ1.setForeground(new java.awt.Color(255, 255, 255));
         NQ1.setText("Questões respondidas:");
+        jPanel1.add(NQ1);
+        NQ1.setBounds(10, 456, 218, 45);
 
         Desistir1.setBackground(new java.awt.Color(255, 0, 0));
         Desistir1.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
@@ -131,112 +185,116 @@ public class pnivel1 extends javax.swing.JFrame {
                 Desistir1ActionPerformed(evt);
             }
         });
+        jPanel1.add(Desistir1);
+        Desistir1.setBounds(724, 11, 120, 30);
 
         numeroQ1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         numeroQ1.setForeground(new java.awt.Color(204, 0, 0));
         numeroQ1.setText("0");
+        jPanel1.add(numeroQ1);
+        numeroQ1.setBounds(234, 449, 51, 51);
+        jPanel1.add(usertext);
+        usertext.setBounds(650, 485, 190, 40);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(118, 118, 118)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(enunciado1, javax.swing.GroupLayout.PREFERRED_SIZE, 615, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(rA1)
-                                        .addGap(56, 56, 56)
-                                        .addComponent(rB1)
-                                        .addGap(58, 58, 58)
-                                        .addComponent(rC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(55, 55, 55)
-                                        .addComponent(rD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(rE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(43, 43, 43)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(NQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(numeroQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 111, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(268, 268, 268)
-                                .addComponent(Desistir1))
-                            .addComponent(usertext, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Desistir1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enunciado1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rB1)
-                    .addComponent(rA1)
-                    .addComponent(rC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(NQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numeroQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(usertext, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
-        );
+        campoTexto.setEditable(false);
+        campoTexto.setBackground(new java.awt.Color(0, 51, 153));
+        campoTexto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jScrollPane1.setViewportView(campoTexto);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(60, 120, 730, 190);
 
-        pack();
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("D");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(630, 350, 20, 20);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("A");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(140, 350, 20, 20);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("B");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(260, 350, 20, 20);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("C");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(390, 350, 20, 20);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("D");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(520, 350, 20, 20);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 857, 558);
+
+        setSize(new java.awt.Dimension(870, 578));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Desistir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Desistir1ActionPerformed
         new Quiz().setVisible(true);
         dispose();
     }//GEN-LAST:event_Desistir1ActionPerformed
-    int x = 0;
-    ArrayList<String> enunciado = new ArrayList<>();
+    int acertos = 0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (x < arrayQuestoes.size()) {
-            enunciado1.setText(enunciado.get(x));
-            System.out.println(arrayQuestoes.get(x).getEnunciado());
-            numeroQ1.setText(String.valueOf(++x));
+       
+         if (rA1.isSelected() == false && rB1.isSelected() == false && rC1.isSelected() == false && rD1.isSelected() == false && rE1.isSelected() == false) {
+            JOptionPane.showMessageDialog(null, "Você deve selecionar alguma opção!!");
         } else {
-            JOptionPane.showMessageDialog(null, "Limite de questoes atingidas");
+            if (x < q1.questao.size()) {
+                if (verificar()) {
+                    acertos++;
+                    questoesCorretas.add(q);
+                } else {
+                    System.out.println("errou");
+                }
+            } else {
+                campoTexto.setText("");
+                buttonGroup1.clearSelection();
+                JOptionPane.showMessageDialog(null, "Limite de questoes atingidas");
+                Resultado tela = new Resultado(questoesCorretas);
+                tela.setVisible(true);
+                tela.lblResultado.setText("Resultado do NÍVEL 1");
+                if (acertos == 0) {
+                    tela.campoTexto.setText("          Você não acertou nenhuma questão!"
+                            + "\n                TENTE NOVAMENTE!!!");
+                    tela.lblAvaliacao.setText("UM FIASCO");
+                } else if (acertos <= 4) {
+                    tela.lblAvaliacao.setText("RUIM");
+                } else if (acertos <= 7) {
+                    tela.lblAvaliacao.setText("MEDIANO");
+                } else if (acertos <= 9) {
+                    tela.lblAvaliacao.setText("EXECELENTE");
+
+                } else {
+                    tela.lblAvaliacao.setText("GENIAL");
+                }
+                tela.lblAcertos.setText(String.valueOf(acertos));
+
+            }
+            numeroQ1.setText(String.valueOf(++x));
+            campoTexto.setText("");
+            novaQuestao();
+            buttonGroup1.clearSelection();
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
-    }
+
+    private void rA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rA1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rA1ActionPerformed
+    
 
     /**
      * @param args the command line arguments
@@ -276,10 +334,18 @@ public class pnivel1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Desistir1;
     private javax.swing.JLabel NQ1;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextPane campoTexto;
     private javax.swing.JLabel enunciado1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel numeroQ1;
     private javax.swing.JRadioButton rA1;
     private javax.swing.JRadioButton rB1;

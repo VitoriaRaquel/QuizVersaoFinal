@@ -31,7 +31,7 @@ class questoes2 {
     
     public void popularColecao() {
         Questao w = new Questao();
-        w.enunciado = "Tendo em mente a matriz a seguir, encontre o seu determinante:\n"
+        w.enunciado = "- Tendo em mente a matriz a seguir, encontre o seu determinante:\n"
                 + "|1 0 2|\n"
                 + "|2 4 1|\n"
                 + "|3 2 0|\n";
@@ -47,7 +47,7 @@ class questoes2 {
        |2 4 1|2 4| = 8-26= -18  
        |3 2 0|3 2|  */
         w = new Questao();
-        w.enunciado = "Calcule a determinante da seguinte matriz de ordem 3: \n"
+        w.enunciado = "- Calcule a determinante da seguinte matriz de ordem 3: \n"
                 + "|1 1 2|\n"
                 + "|2 1 3|\n"
                 + "|1 4 2|\n";
@@ -64,7 +64,7 @@ class questoes2 {
         |2 1 3|2 1| = 21-18= 3   
         |1 4 2|1 4|              */
         w = new Questao();
-        w.enunciado = "Descubra a determinante da matriz abaixo usando a lei de Sarrus: \n"
+        w.enunciado = " - Descubra a determinante da matriz abaixo usando a lei de Sarrus: \n"
                 + "|3 -1 -2|\n"
                 + "|2  1  1|\n"
                 + "|2  1 -2|\n";
@@ -80,7 +80,7 @@ class questoes2 {
         |2  1  1|2  1|= -12-3 = -15  
         |2  1 -2|2  1|               */
         w = new Questao();
-        w.enunciado = "Dada a matriz 3x3 E, calcule o seu determinante:? \n"
+        w.enunciado = " -Dada a matriz 3x3 E, calcule o seu determinante:? \n"
                 + "|2 0 4|\n"
                 + "|1 0 4|\n"
                 + "|4 4 2|\n";
@@ -96,7 +96,7 @@ class questoes2 {
         |1 0 4|1  0|= 16-32 = -16  
         |4 4 2|4  4|               */
         w = new Questao();
-        w.enunciado = "Qual é o determinante de A? \n"
+        w.enunciado = " -Qual é o determinante de A? \n"
                 + "|-2  1  0|\n"
                 + "| 3  4  0|\n"
                 + "|10 -8  0|\n";
@@ -110,7 +110,7 @@ class questoes2 {
         /*Resposta:
 POSSUI UMA FILEIRA NULA, POR ISSO O DET É ZERO.*/
         w = new Questao();
-        w.enunciado = "Calcule o determinante de Vandermonde  ? \n"
+        w.enunciado = "-Calcule o determinante de Vandermonde  ? \n"
                 + "|1 1 1|\n"
                 + "|2 3 5|\n"
                 + "|4 9 25|\n";

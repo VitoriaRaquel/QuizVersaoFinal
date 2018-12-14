@@ -78,6 +78,11 @@ public class pnivel2 extends javax.swing.JFrame {
         numeroQ2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         campoTexto = new javax.swing.JTextPane();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -128,7 +133,7 @@ public class pnivel2 extends javax.swing.JFrame {
         rE2.setForeground(new java.awt.Color(255, 255, 255));
         rE2.setText("E");
         jPanel1.add(rE2);
-        rE2.setBounds(650, 330, 150, 23);
+        rE2.setBounds(650, 330, 130, 23);
 
         rA2.setBackground(new java.awt.Color(0, 51, 153));
         rA2.setForeground(new java.awt.Color(255, 255, 255));
@@ -189,6 +194,36 @@ public class pnivel2 extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(50, 120, 700, 170);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("E");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(640, 330, 20, 20);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("A");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(90, 330, 20, 20);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("B");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(230, 330, 20, 20);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("C");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(370, 330, 20, 20);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("D");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(500, 330, 20, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -322,6 +357,11 @@ public class pnivel2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel numeroQ2;

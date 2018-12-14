@@ -82,7 +82,7 @@ public class Questao {
 
     @Override
     public String toString() {
-        return "Questao{" + "enunciado=" + enunciado + ", a=" + a + ", b=" + b + ", c=" + c + ", d=" + d + ", e=" + e + ", questaoCorreta=" + questaoCorreta + '}';
+        return  "\n ENUNCIADO: " + enunciado + "\n\n Resposta CORRETA:  " + questaoCorreta + '}';
     }
     
     

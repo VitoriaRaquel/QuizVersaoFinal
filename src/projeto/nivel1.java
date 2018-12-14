@@ -35,6 +35,7 @@ public class nivel1 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,10 +49,10 @@ public class nivel1 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Sylfaen", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Seja Bem Vindo ao Nível 1");
+        jLabel1.setText("Seja Bem Vindo ");
         jLabel1.setToolTipText("");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(170, 30, 414, 60);
+        jLabel1.setBounds(140, 20, 414, 60);
 
         jButton1.setBackground(new java.awt.Color(0, 204, 0));
         jButton1.setFont(new java.awt.Font("Perpetua Titling MT", 0, 11)); // NOI18N
@@ -64,7 +65,7 @@ public class nivel1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(230, 270, 140, 50);
+        jButton1.setBounds(160, 350, 140, 50);
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
         jButton2.setText("Voltar");
@@ -76,7 +77,11 @@ public class nivel1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(390, 270, 140, 50);
+        jButton2.setBounds(330, 350, 140, 50);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/2048735_200x130.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(90, 70, 500, 300);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,7 +98,7 @@ public class nivel1 extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        setSize(new java.awt.Dimension(827, 566));
+        setSize(new java.awt.Dimension(661, 526));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -113,6 +118,7 @@ public class nivel1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

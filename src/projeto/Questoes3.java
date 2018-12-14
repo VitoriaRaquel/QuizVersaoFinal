@@ -35,7 +35,7 @@ class Questoes3 {
     
     public void popularColecao(){
         Questao y = new Questao();
-        y.enunciado =" *(MACK) Calcule o valor do determinante: \n"
+        y.enunciado =" \n=*(MACK) Calcule o valor do determinante: \n"
                 + "|1 1 3 1|\n"
                 + "|1 3 3 2|\n"
                 + "|2 5 3 3|\n"
@@ -60,7 +60,7 @@ class Questoes3 {
 	det = 1 x 0 + 1 x 3 + 1 */
         
         y = new Questao();
-        y.enunciado="Calcule o valor do determinante \n"
+        y.enunciado="\n -Calcule o valor do determinante \n"
                 + "| 2  3  -1  0 |\n"
                 + "| 4 -2   1  3 |\n"
                 + "| 1 -5   2  1 | \n"
@@ -88,7 +88,7 @@ class Questoes3 {
 	 34 - 132 + 111 = */
        
        y = new Questao();
-        y.enunciado="Calcule o valor do determinante \n"
+        y.enunciado="\n-Calcule o valor do determinante \n"
                 + "| 3  1  -2  1 |\n"
                 + "| 5  2   2  3 |\n"
                 + "| 7  4  -5  0 | \n"
@@ -115,7 +115,7 @@ class Questoes3 {
 	 63 + 80 - 35 = 108*/
         
         y = new Questao();
-        y.enunciado="Calcule o valor do determinante \n"
+        y.enunciado="\n- Calcule o valor do determinante \n"
                 + "| 4  0   0  0 |\n"
                 + "| 2 -1   3  1 |\n"
                 + "| 1 -3   2  1 | \n"
@@ -137,7 +137,7 @@ class Questoes3 {
 	 det = 4 x 41 = 163*/
      
      y = new Questao();
-        y.enunciado="- O determinante da matriz A abaixo vale 2 \n"
+        y.enunciado="\n- O determinante da matriz A abaixo vale 2 \n"
              +  " A=| a  b  c  d |\n"
              +  "   | e  f  g  h |\n"
              +  "   | i  j  k  l |\n"
@@ -163,7 +163,7 @@ class Questoes3 {
         detB = -2 x -5 x -2 x 3 = -60*/
         
         y = new Questao();
-        y.enunciado="Considere a seguinte matriz:"
+        y.enunciado="\nConsidere a seguinte matriz:"
                 + "                | x 0 0 0 |\n"
 		+ "                | 1 x 1 2 |\n"
 		+"                 | 2 0 x 3 |\n"
@@ -189,7 +189,7 @@ class Questoes3 {
 	X^2 = 9*/
         
         y = new Questao();
-        y.enunciado= " O determinante da matriz: | 1 -1 2 0 |\n" 
+        y.enunciado= " \nO determinante da matriz: | 1 -1 2 0 |\n" 
                     +"                           | 0  3 4 0 |\n" 
                     +"                           | 5  1 2 0 |\n" 
                     +"                           | 0  0 0 1 |\n"
@@ -210,7 +210,7 @@ class Questoes3 {
 	det = 1 x (-48) = -48 */
         
         y = new Questao();
-        y.enunciado="o valor do determinante é:\n"
+        y.enunciado="\no valor do determinante é:\n"
                +"    | 1 1 3 1 | \n" 
                +"    | 1 3 3 2 |\n"
                +"    | 2 5 3 3 |\n"

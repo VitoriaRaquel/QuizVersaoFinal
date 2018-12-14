@@ -37,6 +37,7 @@ public class pnivel3 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
         botaoContinuar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -47,9 +48,9 @@ public class pnivel3 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Sylfaen", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Seja Bem-vindo ao Nível 3");
+        jLabel1.setText("Seja Bem-vindo ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(291, 36, 343, 33);
+        jLabel1.setBounds(230, 0, 343, 90);
 
         botaoVoltar.setBackground(new java.awt.Color(255, 51, 51));
         botaoVoltar.setFont(new java.awt.Font("Perpetua Titling MT", 0, 11)); // NOI18N
@@ -60,7 +61,7 @@ public class pnivel3 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botaoVoltar);
-        botaoVoltar.setBounds(470, 250, 150, 50);
+        botaoVoltar.setBounds(320, 350, 150, 50);
 
         botaoContinuar.setBackground(new java.awt.Color(0, 204, 0));
         botaoContinuar.setFont(new java.awt.Font("Perpetua Titling MT", 0, 11)); // NOI18N
@@ -71,12 +72,16 @@ public class pnivel3 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botaoContinuar);
-        botaoContinuar.setBounds(300, 250, 150, 50);
+        botaoContinuar.setBounds(140, 350, 150, 50);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/2048735_200x130.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(70, 110, 500, 220);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(-3, -2, 840, 530);
 
-        setSize(new java.awt.Dimension(852, 567));
+        setSize(new java.awt.Dimension(609, 497));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -132,6 +137,7 @@ public class pnivel3 extends javax.swing.JFrame {
     private javax.swing.JButton botaoContinuar;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
