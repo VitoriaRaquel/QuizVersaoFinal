@@ -33,7 +33,6 @@ public class pnivel extends javax.swing.JFrame {
         buttonGroup2.add(rE);
 
         novaQuestao();
-       
 
     }
     Questao q;
@@ -250,9 +249,6 @@ public class pnivel extends javax.swing.JFrame {
         } else if (rE.isSelected() == true && rE.getText().equals(q.questaoCorreta)) {
             System.out.println("Acertou E");
             return true;
-        } else if (rA.isSelected() == false && rB.isSelected() == false && rC.isSelected() == false && rD.isSelected() == false && rE.isSelected() == false) {
-            JOptionPane.showMessageDialog(null, "Selecione uma opção");
-            return false;
         } else {
             return false;
         }
@@ -261,46 +257,45 @@ public class pnivel extends javax.swing.JFrame {
     int acertos = 0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
-        if (x < q3.questao.size()) {
-            if (verificar()) {
-                acertos++;
-                questoesCorretas.add(q);
-            } else {
-                System.out.println("errou");
-            }
-
+        if (rA.isSelected() == false && rB.isSelected() == false && rC.isSelected() == false && rD.isSelected() == false && rE.isSelected() == false) {
+            JOptionPane.showMessageDialog(null, "Você deve selecionar alguma opção!!");
         } else {
-            campoTexto.setText("");
-            buttonGroup2.clearSelection();
-            JOptionPane.showMessageDialog(null, "Limite de questoes atingidas");
-                     
-            Resultado tela = new Resultado(questoesCorretas);
-            tela.setVisible(true);
-            tela.lblResultado.setText("Resultado do NÍVEL 3");
-            if (acertos == 0) {
-                tela.campoTexto.setText("          Você não acertou nenhuma questão!"
-                        + "\n                TENTE NOVAMENTE!!!");
-                tela.lblAvaliacao.setText("UM FIASCO");
-            } else if (acertos <= 4) {
-                tela.lblAvaliacao.setText("RUIM");
-            } else if (acertos <= 7) {
-                tela.lblAvaliacao.setText("MEDIANO");
-            } else if (acertos <= 9) {
-                tela.lblAvaliacao.setText("EXECELENTE");
-
+            if (x < q3.questao.size()) {
+                if (verificar()) {
+                    acertos++;
+                    questoesCorretas.add(q);
+                } else {
+                    System.out.println("errou");
+                }
             } else {
-                tela.lblAvaliacao.setText("GENIAL");
+                campoTexto.setText("");
+                buttonGroup2.clearSelection();
+                JOptionPane.showMessageDialog(null, "Limite de questoes atingidas");
+                Resultado tela = new Resultado(questoesCorretas);
+                tela.setVisible(true);
+                tela.lblResultado.setText("Resultado do NÍVEL 3");
+                if (acertos == 0) {
+                    tela.campoTexto.setText("          Você não acertou nenhuma questão!"
+                            + "\n                TENTE NOVAMENTE!!!");
+                    tela.lblAvaliacao.setText("UM FIASCO");
+                } else if (acertos <= 4) {
+                    tela.lblAvaliacao.setText("RUIM");
+                } else if (acertos <= 7) {
+                    tela.lblAvaliacao.setText("MEDIANO");
+                } else if (acertos <= 9) {
+                    tela.lblAvaliacao.setText("EXECELENTE");
+
+                } else {
+                    tela.lblAvaliacao.setText("GENIAL");
+                }
+                tela.lblAcertos.setText(String.valueOf(acertos));
+
             }
-            tela.lblAcertos.setText(String.valueOf(acertos));
-            
+            qRespondida.setText(String.valueOf(++x));
+            campoTexto.setText("");
+            novaQuestao();
+            buttonGroup2.clearSelection();
         }
-        qRespondida.setText(String.valueOf(++x));
-        campoTexto.setText("");
-        novaQuestao();
-        buttonGroup2.clearSelection();
-
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rAActionPerformed
