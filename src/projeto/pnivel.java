@@ -38,16 +38,21 @@ public class pnivel extends javax.swing.JFrame {
     Questao q;
 
     public void novaQuestao() {
-
+    
         int numeroSorteado = q3.randomizar();
-        indeces.add(numeroSorteado);
-        q = q3.questao.get(numeroSorteado);
-        campoTexto.setText(q.enunciado);
-        rA.setText(q.getA());
-        rB.setText(q.getB());
-        rC.setText(q.getC());
-        rD.setText(q.getD());
-        rE.setText(q.getE());
+  
+            indeces.add(numeroSorteado);
+            q = q3.questao.get(numeroSorteado);
+            campoTexto.setText(q.enunciado);
+            rA.setText(q.getA());
+            rB.setText(q.getB());
+            rC.setText(q.getC());
+            rD.setText(q.getD());
+            rE.setText(q.getE());
+        
+        
+        
+
     }
 
     /**
@@ -295,6 +300,7 @@ public class pnivel extends javax.swing.JFrame {
         if (rA.isSelected() == false && rB.isSelected() == false && rC.isSelected() == false && rD.isSelected() == false && rE.isSelected() == false) {
             JOptionPane.showMessageDialog(null, "Você deve selecionar alguma opção!!");
         } else {
+
             if (x < q3.questao.size()) {
                 if (verificar()) {
                     acertos++;
@@ -308,6 +314,7 @@ public class pnivel extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Limite de questoes atingidas");
                 Resultado tela = new Resultado(questoesCorretas);
                 tela.setVisible(true);
+                dispose();
                 tela.lblResultado.setText("Resultado do NÍVEL 3");
                 if (acertos == 0) {
                     tela.campoTexto.setText("          Você não acertou nenhuma questão!"
@@ -324,7 +331,7 @@ public class pnivel extends javax.swing.JFrame {
                     tela.lblAvaliacao.setText("GENIAL");
                 }
                 tela.lblAcertos.setText(String.valueOf(acertos));
-
+                   System.out.println(indeces);
             }
             qRespondida.setText(String.valueOf(++x));
             campoTexto.setText("");

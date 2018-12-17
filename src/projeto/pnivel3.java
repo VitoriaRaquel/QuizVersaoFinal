@@ -38,6 +38,7 @@ public class pnivel3 extends javax.swing.JFrame {
         botaoVoltar = new javax.swing.JButton();
         botaoContinuar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -46,11 +47,11 @@ public class pnivel3 extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(832, 545));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Sylfaen", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Seja Bem-vindo ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(230, 0, 343, 90);
+        jLabel1.setBounds(223, 0, 340, 100);
 
         botaoVoltar.setBackground(new java.awt.Color(255, 51, 51));
         botaoVoltar.setFont(new java.awt.Font("Perpetua Titling MT", 0, 11)); // NOI18N
@@ -74,9 +75,17 @@ public class pnivel3 extends javax.swing.JFrame {
         jPanel1.add(botaoContinuar);
         botaoContinuar.setBounds(140, 350, 150, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/2048735_200x130.png"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/nivel 3.gif"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(70, 110, 500, 220);
+        jLabel2.setBounds(60, 130, 500, 230);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("4x4");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(270, 100, 80, 90);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(-3, -2, 840, 530);
@@ -138,6 +147,7 @@ public class pnivel3 extends javax.swing.JFrame {
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

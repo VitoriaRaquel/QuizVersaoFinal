@@ -33,6 +33,7 @@ public class nivel2 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -42,7 +43,7 @@ public class nivel2 extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(832, 545));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 2, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Seja bem vindo ");
@@ -71,14 +72,21 @@ public class nivel2 extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(200, 340, 120, 49);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/2048735_200x130.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/nivel22.gif"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(90, 100, 520, 240);
+        jLabel2.setBounds(210, 20, 440, 390);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("3x3");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(210, 170, 190, 140);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 694, 477);
+        jPanel1.setBounds(0, 0, 740, 510);
 
-        pack();
+        setSize(new java.awt.Dimension(756, 550));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -131,6 +139,7 @@ public class nivel2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

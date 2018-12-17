@@ -158,7 +158,7 @@ public class pnivel2 extends javax.swing.JFrame {
 
         enunciado2.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         enunciado2.setForeground(new java.awt.Color(255, 255, 255));
-        enunciado2.setText("ENUNCIADO2");
+        enunciado2.setText("ENUNCIADO");
         jPanel1.add(enunciado2);
         enunciado2.setBounds(50, 70, 140, 50);
 
@@ -284,19 +284,19 @@ public class pnivel2 extends javax.swing.JFrame {
                 campoTexto.setText("");
                 buttonGroup1.clearSelection();
                 JOptionPane.showMessageDialog(null, "Limite de questoes atingidas");
-
                 Resultado tela = new Resultado(questoesCorretas);
                 tela.setVisible(true);
+                dispose();
                 tela.lblResultado.setText("Resultado do NÍVEL 2");
                 if (acertos == 0) {
                     tela.campoTexto.setText("          Você não acertou nenhuma questão!"
                             + "\n                TENTE NOVAMENTE!!!");
                     tela.lblAvaliacao.setText("UM FIASCO");
-                } else if (acertos <= 4) {
+                } else if (acertos <= 5) {
                     tela.lblAvaliacao.setText("RUIM");
-                } else if (acertos <= 7) {
+                } else if (acertos <= 8) {
                     tela.lblAvaliacao.setText("MEDIANO");
-                } else if (acertos <= 9) {
+                } else if (acertos <= 14) {
                     tela.lblAvaliacao.setText("EXECELENTE");
 
                 } else {

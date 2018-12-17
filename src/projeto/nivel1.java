@@ -46,13 +46,13 @@ public class nivel1 extends javax.swing.JFrame {
         jPanel1.setFont(new java.awt.Font("Franklin Gothic Medium", 2, 24)); // NOI18N
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Sylfaen", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Seja Bem Vindo ");
         jLabel1.setToolTipText("");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(140, 20, 414, 60);
+        jLabel1.setBounds(110, 20, 414, 60);
 
         jButton1.setBackground(new java.awt.Color(0, 204, 0));
         jButton1.setFont(new java.awt.Font("Perpetua Titling MT", 0, 11)); // NOI18N
@@ -79,9 +79,12 @@ public class nivel1 extends javax.swing.JFrame {
         jPanel1.add(jButton2);
         jButton2.setBounds(330, 350, 140, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/2048735_200x130.png"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/p11.gif"))); // NOI18N
+        jLabel2.setText("2x2");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(90, 70, 500, 300);
+        jLabel2.setBounds(120, 90, 410, 240);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

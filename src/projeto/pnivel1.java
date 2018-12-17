@@ -264,16 +264,17 @@ public class pnivel1 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Limite de questoes atingidas");
                 Resultado tela = new Resultado(questoesCorretas);
                 tela.setVisible(true);
+                 dispose();
                 tela.lblResultado.setText("Resultado do NÍVEL 1");
                 if (acertos == 0) {
                     tela.campoTexto.setText("          Você não acertou nenhuma questão!"
                             + "\n                TENTE NOVAMENTE!!!");
                     tela.lblAvaliacao.setText("UM FIASCO");
-                } else if (acertos <= 4) {
+                } else if (acertos <= 5) {
                     tela.lblAvaliacao.setText("RUIM");
-                } else if (acertos <= 7) {
+                } else if (acertos <= 8) {
                     tela.lblAvaliacao.setText("MEDIANO");
-                } else if (acertos <= 9) {
+                } else if (acertos <= 14) {
                     tela.lblAvaliacao.setText("EXECELENTE");
 
                 } else {

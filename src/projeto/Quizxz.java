@@ -29,7 +29,6 @@ public class Quizxz extends javax.swing.JFrame {
         login = new javax.swing.JLabel();
         camplog = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         menu1.setLabel("File");
         menuBar1.add(menu1);
@@ -51,19 +50,19 @@ public class Quizxz extends javax.swing.JFrame {
         Detquizz.setForeground(new java.awt.Color(255, 255, 255));
         Detquizz.setText("DetQuizz");
         jPanel1.add(Detquizz);
-        Detquizz.setBounds(230, 100, 460, 100);
+        Detquizz.setBounds(70, 90, 460, 100);
 
         inicio.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         inicio.setForeground(new java.awt.Color(255, 255, 255));
         inicio.setText("Seja Bem-Vindo  ");
         jPanel1.add(inicio);
-        inicio.setBounds(335, 39, 154, 50);
+        inicio.setBounds(180, 30, 154, 50);
 
         login.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         login.setForeground(new java.awt.Color(255, 255, 255));
         login.setText("Nome");
         jPanel1.add(login);
-        login.setBounds(400, 200, 65, 22);
+        login.setBounds(230, 200, 65, 22);
 
         camplog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +70,7 @@ public class Quizxz extends javax.swing.JFrame {
             }
         });
         jPanel1.add(camplog);
-        camplog.setBounds(290, 230, 280, 30);
+        camplog.setBounds(120, 230, 280, 30);
 
         jButton1.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 51, 255));
@@ -82,11 +81,7 @@ public class Quizxz extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(380, 290, 104, 48);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projeto/q.gif"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(520, 220, 410, 370);
+        jButton1.setBounds(220, 280, 104, 48);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,7 +98,7 @@ public class Quizxz extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32568, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        setSize(new java.awt.Dimension(848, 584));
+        setSize(new java.awt.Dimension(538, 445));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -164,7 +159,6 @@ public class Quizxz extends javax.swing.JFrame {
     private javax.swing.JTextField camplog;
     private javax.swing.JLabel inicio;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel login;
     private java.awt.Menu menu1;
