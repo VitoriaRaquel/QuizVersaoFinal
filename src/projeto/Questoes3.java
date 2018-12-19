@@ -55,14 +55,15 @@ class Questoes3 {
 	 det = 1 x C41 + 1 x C42 + 1 x C43 + 1 x C44
 	Ao calcularmos os cofatores descobrimos que: C41 = 0; C42 = 3; C43 = -1; C44 = -6 
 	Então substituindo na formula...
-	det = 1 x 0 + 1 x 3 + 1 */
+	det = 1 x 0 + 1 x 3 + 1 =-2*/
         
         y = new Questao();
-        y.enunciado="\n -Calcule o valor do determinante \n"
-                + "             | 2  3  -1  0 |\n"
-                + "             | 4 -2   1  3 |\n"
-                + "             | 1 -5   2  1 | \n"
-                + "             | 0  3  -2  6 |\n";
+        y.enunciado=" -Calcule o valor do determinante \n"
+                + "            | 2  3  -1  0 |\n"
+                + "            | 4 -2   1  3 |\n"
+                + "            | 1 -5   2  1 | \n"
+                + "            | 0  3  -2  6 |\n";
+        
         y.a="13";
         y.b="14";
         y.c="24";
@@ -121,7 +122,7 @@ class Questoes3 {
               y.a="25";
               y.b="-1";
               y.c="200";
-              y.d="163";
+              y.d="164";
               y.e="-25";
               y.questaoCorreta=y.d;
               questao.add(y);
@@ -132,7 +133,7 @@ class Questoes3 {
 	Calculando os cofatores descobrimos que: C11 = 41
 	* Não calculamos o C1, C13, e C14 , porque qualquer número multiplicado por 0 = 0
 	Então substituindo na formula...
-	 det = 4 x 41 = 163*/
+	 det = 4 x 41 = 164*/
      
      y = new Questao();
         y.enunciado="- O determinante da matriz A abaixo vale 2 \n"
@@ -161,7 +162,7 @@ class Questoes3 {
         detB = -2 x -5 x -2 x 3 = -60*/
         
         y = new Questao();
-        y.enunciado="- Considere a seguinte matriz:/n"
+        y.enunciado="- Considere a seguinte matriz:\n"
                 +"                 | x  0  0  0 |\n"
 		+"                 | 1  x  1  2 |\n"
 		+"                 | 2  0  x  3 |\n"
@@ -181,7 +182,7 @@ class Questoes3 {
 	// x² = menor que 7
         
         y = new Questao();
-        y.enunciado= "- O determinante da matriz:"
+        y.enunciado= "- O determinante da matriz:\n"
                     +"                             | 1 -1  2  0 |\n" 
                     +"                             | 0  3  4  0 |\n" 
                     +"                             | 5  1  2  0 |\n" 
@@ -204,26 +205,26 @@ class Questoes3 {
         
         y = new Questao();
         y.enunciado="- O valor do determinante é:\n"
-               +"           | 1  1  3  1 | \n" 
-               +"           | 1  3  3  2 |\n"
-               +"           | 2  5  3  3 |\n"
-               +"           | 1  1  1  1 |\n";
+               +"           | 4  5 -3  0 | \n" 
+               +"           | 2 -1  3  1 |\n"
+               +"           | 1 -3  2  1 |\n"
+               +"           | 0  2 -2  5 |\n";
         y.a="-4";
-        y.b="-2";
-        y.c="0";
-        y.d="1";
-        y.e="2";
+        y.b="100";
+        y.c="210";
+        y.d="-100";
+        y.e="94";
         y.questaoCorreta=y.c;
         questao.add(y);
        /*resposta:c*
-	Escoolhemos a quarta linha pra usar-la como base
-	det = 1 x C41 + 1 x C42 + 1 x C43 + 1 x C44
-	Descobrimos que os valores dos Cofatores são correspondentes á C41 = 3 ; C42 = 3; C43 = 0; C44 = -6
+	Escoolhemos a primeira linha pra usar-la como base
+	det = 4.C11+5.C12+(-3).C13+0.C14
+	Descobrimos que os valores dos Cofatores são correspondentes á C11 = 41 ; C12 = -7; C13 =-27 (C14= , POIS TODO NUMERO MULTIPLICADO POR 0 É ZERO)
 	Colocamos na formula para descobrirmos o valor do determinante da matriz...
-	det = 1 x 3 + 1 x 3 + 1 x 0 + 1 x -6 = 0*/
+	det = 4.41+5.-7+(-3).-27=210*/
        
        y = new Questao();
-       y.enunciado="- O valor do determinante é:"
+       y.enunciado="- O valor do determinante é:\n"
                +"           | 1   0   2  0 |\n" 
                +"           | 3  -2   1  5 |\n"
                +"           | 6   0  -1  4 |\n"
@@ -261,7 +262,7 @@ class Questoes3 {
 	det =  0 x C21 + 1 x C22 + 0 x C23 + 0 x C24
 	Descobrimos que os valores do Cofatore é igual á C22 = -1
 	Os demais cofatores estão sendo multiplicados por zero, logo seu resultado será igual a 0
-	det =  0 - 1 + 0 + 0 = -18*/
+	det =  0 - 1 + 0 + 0 = -1*/
        questao.add(y);
     }
 }

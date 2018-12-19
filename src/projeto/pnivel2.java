@@ -190,6 +190,15 @@ public class pnivel2 extends javax.swing.JFrame {
 
         campoTexto.setEditable(false);
         campoTexto.setBackground(new java.awt.Color(0, 51, 153));
+        campoTexto.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                campoTextoAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(campoTexto);
 
         jPanel1.add(jScrollPane1);
@@ -312,6 +321,10 @@ public class pnivel2 extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void campoTextoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_campoTextoAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoTextoAncestorAdded
     // }
 
     /**

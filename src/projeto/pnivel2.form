@@ -274,6 +274,9 @@
                   <Color blue="99" green="33" red="0" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="campoTextoAncestorAdded"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

@@ -88,7 +88,7 @@ class questoes1 {
         2x(2/3)=4/6
         18-(4/6)=
         (108-4)/6=
-        106/6*/
+        104/6*/
         x = new Questao();
         x.enunciado = "- Descubra o valor de x: \n"
                 + "                 |3 9|\n"
@@ -120,7 +120,6 @@ class questoes1 {
         /*x² – 2x = – 1
         x² – 2x + 1 = 0
 
-
         ? = (– 2)² – 4.1.1
         ? = 4 – 4
         ? = 0
@@ -140,8 +139,8 @@ class questoes1 {
         x.e = "1";
         x.questaoCorreta = x.b;
         questao.add(x);
-        /*AxB= |1x(-1)+3x3  1x2=3x1| = |8  5|
-                |2x(-1)+4x3  2x2=4x1|   |10 8|
+        /*AxB= |1x(-1)+3x3  1x2+3x1| = |8  5|
+                |2x(-1)+4x3  2x2+4x1|   |10 8|
             detAxB= 8x8 - 5x10
             64 - 50
             detAxB = 14*/
@@ -232,18 +231,21 @@ class questoes1 {
                 
 		
         x.a = "9";
-        x.b = "-20";
-        x.c = "20";
-        x.d = "-2";
-        x.e = "6";
-        x.questaoCorreta = x.b;
+        x.b = "27";
+        x.c = "40";
+        x.d = "1";
+        x.e = "3";
+        x.questaoCorreta = x.c;
         questao.add(x);
-        /* X = ad-bc
-        y = -20ad + 20bc
-        y = -20(ad-bc)
+        /*1*1 + x*1  = 4;
+    1*2 + x*1 =  5;
+    x = 3
+    y*1 + z*1 = 36;
+    y*2 + z*1 =  45;
+    y = 9;
+    z = 27;
+    Soma dos elementos de A = 1 + 3 + 9 + 27 = 40*/
 
-        y/x = -20(ad-bc) / (ad-bc)
-        Cancelando (ad-bc), y/x = -20*/
 
         x = new Questao();
         x.enunciado = "- A é uma matriz quadrada de ordem 2 e det(A)=7. Nessas condições, det(3A) e det(A-¢) valem respectivamente: \n";
